@@ -2,24 +2,28 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: 
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>ws482@cornell.edu
+    <p>Cornell University</p>
 
-news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+
+news: false # includes a list of news items
+education: true
+experience: true
+club: true
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a MEng student in Operations Research and Information Engineering (ORIE) with Data Analytics concentration. I graduated from Tongji Univeristy, major in Data science in 2023.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am also a practitioner by applying what I learned to provide business solutions and hope to use my skills to gain business insights. I have experience in designing data warehouse models for big tech company facing with billion-level data and also have worked in electric vehicle industry to gather data, build models and design dashboard for R&D engineering analysis. These experiences all exposed me to a business setting while using technical skills combined with data to solve problems.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Aside from enhancing my technical skills, I gradually become a quick learner and a team player. This helps me to adapt to a new environment more quickly and find a position in the team to take initiatives and make impacts. 
+
