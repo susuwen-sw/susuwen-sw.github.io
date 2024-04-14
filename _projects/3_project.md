@@ -1,81 +1,65 @@
 ---
 layout: page
-title: project 3
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+title: Prediction for Loan Default based on Machine Learning
+description: Computer Federation Big Data&Computing Intelligence Contest
+img: assets/img/ccf-4.webp
+#redirect: https://www.datafountain.cn/competitions/530
 importance: 3
-category: work
+category: academic
 ---
+<h2>Background</h2>
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+To further promote financial inclusion, financial institutions need to serve many new customer groups. As an industry with high requirements for risk control, banks lack understanding of new customer groups, and risk control of new customer segments often becomes an important obstacle to financial inclusion. How to use banks' existing credit behavior data to serve new scenarios and new customer groups has become a valuable research direction, and transfer learning is one of the important means.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+<h2>Task</h2>
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+This competition requires the use of another batch of existing credit data that is slightly different from the target customer group to assist in the creation of the target business risk control model. There are a large number of identical fields and very few common users between the two data sets. I hope you can use transfer learning to capture the correlation between users' basic information and default behaviors in different businesses, and help predict user defaults in new businesses.
+
+<h2>Method</h2>
+
+<h4>Exploratory Data Analysis</h4>
+
+Several techniques are applied to the dataset. From the figure below, we can know the distribution of training and testing data.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/ccf-3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Distribution of training and testing data
 </div>
+
+<h4>Modelling</h4>
+
+Two data sets are given with a slightly different customer group. Therefore, if we use the dataset directly, it will introduct a lot of noise. To mitigate the deficiencies, a two-phase modelling process is build.
+
+First, by using training data public and Internet and utilizing feature engineering, a model is built based on LightGBM. Setting the thershold of 0.15, new training data is generated.
+
+After that, a stacking model based on LightGBM, Xgboost and GBDT is created to predict whether the customer will pay the loan.
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/ccf-1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Flow Chart of Data
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+<h2>Result</h2>
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+The Accuracy of the model is 0.838 and the F1 score is 0.913.
+
+From the model we built, we can know the importance of features. The highest 20 features are shown in the figure.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ccf-2.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Feature Importance
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
 
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}

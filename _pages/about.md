@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>ws482@cornell.edu
+    <p>ws482@cornell.edu</p>
     <p>Cornell University</p>
 
 
