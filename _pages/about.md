@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: right
-  image: prof_photo.jpg
+  image: prof_photo.png
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>ws482@cornell.edu</p>
