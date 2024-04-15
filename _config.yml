@@ -170,24 +170,37 @@ external_sources:
 # -----------------------------------------------------------------------------
 
 collections:
-  news:
+  education:
     defaults:
       layout: post
     output: true
-    permalink: /news/:path/
-  projects:
-    output: true
-    permalink: /projects/:path/
+    permalink: /education/:path/
 
-announcements:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+    experience:
+      defaults:
+        layout: post
+      output: true
+      permalink: /experience/:path/
 
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+    club:
+      defaults:
+        layout: post
+      output: true
+      permalink: /club/:path/
+
+    projects:
+      output: true
+      permalink: /projects/:path/
+
+  announcements:
+    enabled: true
+    scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+    limit: 5 # leave blank to include all the news in the `_news` folder
+
+  latest_posts:
+    enabled: true
+    scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+    limit: 3 # leave blank to include all the blog posts
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
