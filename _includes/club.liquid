@@ -1,5 +1,6 @@
 <div class="club">
-  {% if page.club != blank %}
+  {%site.club%}
+  {% if site.club != blank %}
     {% assign club_size = site.club | size %}
     <div
       class="table-responsive"
