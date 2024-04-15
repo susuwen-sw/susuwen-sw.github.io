@@ -72,6 +72,14 @@ layout: default
       {% include experience.liquid %}
     {% endif %}
 
+    <!-- Club -->
+    {% if page.club %}
+      <h2>
+        <a href="{{ '/club/' | relative_url }}" style="color: inherit">Club</a>
+      </h2>
+      {% include club.liquid %}
+    {% endif %}
+
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
