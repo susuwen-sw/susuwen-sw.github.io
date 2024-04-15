@@ -56,6 +56,22 @@ layout: default
       {% include latest_posts.liquid %}
     {% endif %}
 
+    <!-- Education -->
+    {% if site.education.enabled %}
+      <h2>
+        <a href="{{ '/education/' | relative_url }}" style="color: inherit">Education</a>
+      </h2>
+      {% include education.liquid %}
+    {% endif %}
+
+    <!-- Experience -->
+    {% if site.experience.enabled %}
+      <h2>
+        <a href="{{ '/experience/' | relative_url }}" style="color: inherit">Experience</a>
+      </h2>
+      {% include experience.liquid %}
+    {% endif %}
+
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
