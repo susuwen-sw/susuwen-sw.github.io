@@ -2,7 +2,7 @@
 layout: page
 permalink: /club/
 title: Club
-nav: false
+nav: yes
 nav_order: 3
 ---
 
