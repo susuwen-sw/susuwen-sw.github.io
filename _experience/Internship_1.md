@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Data Engineer Intern, TikTok-TnS, Bytedance 
+Data Engineer Intern, Data-TikTok, Bytedance 
