@@ -191,6 +191,12 @@ collections:
     output: true
     permalink: /experience/:path/
 
+  club:
+    defaults:
+      layout: post
+    output: true
+    permalink: /club/:path/
+
 announcements:
   enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
