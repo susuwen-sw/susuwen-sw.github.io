@@ -191,11 +191,11 @@ collections:
     output: true
     permalink: /experience/:path/
 
-  club:
+  leadership:
     defaults:
       layout: post
     output: true
-    permalink: /club/:path/
+    permalink: /leadership/:path/
 
 announcements:
   enabled: true
