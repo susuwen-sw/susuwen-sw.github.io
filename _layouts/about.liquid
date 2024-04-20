@@ -73,11 +73,11 @@ layout: default
     {% endif %}
 
     <!-- Club -->
-    {% if page.club %}
+    {% if page.leadership %}
       <h2>
-        <a href="{{ '/club/' | relative_url }}" style="color: inherit">Club</a>
+        <a href="{{ '/leadership/' | relative_url }}" style="color: inherit">Leadership</a>
       </h2>
-      {% include club.liquid %}
+      {% include leadership.liquid %}
     {% endif %}
 
     <!-- Selected papers -->
